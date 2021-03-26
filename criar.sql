@@ -2,32 +2,22 @@
 PRAGMA foreign_keys = ON;
 
 
-DROP TABLE IF EXISTS Client1;
-CREATE TABLE Client1(
+
+DROP TABLE IF EXISTS Client;
+CREATE TABLE Client(
     ClientID INTEGER PRIMARY KEY,
-    NIF INTEGER,
-    Points INTEGER
-);
-
-
-DROP TABLE IF EXISTS Client2;
-CREATE TABLE Client2(
-    NIF INTEGER PRIMARY KEY,
+    NIF INTEGER UNIQUE KEY,
     ClientName CHAR(30),
     BirthDate DATE
 );
 
-DROP TABLE IF EXISTS Ticket1;
-CREATE TABLE Ticket1(
-    Type CHAR(30) PRIMARY KEY,
+
+DROP TABLE IF EXISTS Ticket;
+CREATE TABLE Ticket(
+    TicketID INTEGER PRIMARY KEY,
+    Type CHAR(30) UNIQUE KEY,
     Price REAL,
     Points INTEGER
-);
-
-DROP TABLE IF EXISTS Ticket2;
-CREATE TABLE Ticket2(
-    TicketID INTEGER PRIMARY KEY,
-    Type CHAR(30)
 );
 
 DROP TABLE IF EXISTS TicketEntry;
@@ -61,18 +51,15 @@ CREATE TABLE ActivityTicket(
     ClientID INTEGER REFERENCES Client(ClientID)   
 );
 
-DROP TABLE IF EXISTS ActivityType1;
-CREATE TABLE ActivityType1(
+DROP TABLE IF EXISTS ActivityType;
+CREATE TABLE ActivityType(
     ActivityTypeID INTEGER PRIMARY KEY,
-    AtName CHAR(30) REFERENCES ActivityType2(AtName)
-);
-
-DROP TABLE IF EXISTS ActivityType2;
-CREATE TABLE ActivityType2(
-    AtName INTEGER PRIMARY KEY,
+    AtName CHAR(30) UNIQUE KEY,
     AtPrice REAL,
     Duration INTEGER
 );
+
+
 
 
 
@@ -99,17 +86,12 @@ CREATE TABLE Habitat(
     ZoneID INTEGER REFERENCES Zone(ZoneID)
 );
 
-DROP TABLE IF EXISTS Zone1;
-CREATE TABLE Zone1(
-    ZName CHAR(30) PRIMARY KEY,
+DROP TABLE IF EXISTS Zone;
+CREATE TABLE Zone(
+    ZoneID INTEGER PRIMARY KEY,
+    ZName CHAR(30) UNIQUE KEY,
     OpeningTime DATE,
     ClosingTime DATE
-);
-
-DROP TABLE IF EXISTS Zone2;
-CREATE TABLE Zone2(
-    ZoneID INTEGER PRIMARY KEY,
-    ZName CHAR(30) REFERENCES Zone1(ZName)
 );
 
 
