@@ -23,29 +23,30 @@ DROP TABLE IF EXISTS TicketEntry;
 CREATE TABLE TicketEntry(
     TDate DATE NOT NULL,
     TEPricePaid REAL NOT NULL CONSTRAINT TEPricePaidMin CHECK (TEPricePaid >= 0.0),
-    ClientID INTEGER NOT NULL REFERENCES Client(ClientID),
-    TicketID INTEGER NOT NULL REFERENCES Ticket(TicketID)   
+    ClientID INTEGER REFERENCES Client(ClientID) ON DELETE SET NULL,
+    TicketID INTEGER REFERENCES Ticket(TicketID) ON DELETE SET NULL
 );
+
 
 DROP TABLE IF EXISTS Activity;
 CREATE TABLE Activity(
     ActivityID INTEGER PRIMARY KEY AUTOINCREMENT,
     StartTime DATETIME NOT NULL,
     EndTime DATETIME NOT NULL,
-    ActivityTypeID INTEGER NOT NULL REFERENCES ActivityType(ActivityTypeID),
+    ActivityTypeID INTEGER REFERENCES ActivityType(ActivityTypeID) ON DELETE SET NULL,
     CONSTRAINT AStartBefEnd CHECK (StartTime < EndTime)
 );
 
 DROP TABLE IF EXISTS Participates;
 CREATE TABLE Participates(
-    AnimalID INTEGER NOT NULL REFERENCES Animal(AnimalID),
-    ActivityID INTEGER NOT NULL REFERENCES Activity(ActivityID)   
+    AnimalID INTEGER REFERENCES Animal(AnimalID) ON DELETE SET NULL,
+    ActivityID INTEGER REFERENCES Activity(ActivityID) ON DELETE SET NULL
 );
 
 DROP TABLE IF EXISTS ActivityTicket;
 CREATE TABLE ActivityTicket(
-    ActivityID INTEGER NOT NULL REFERENCES Activity(ActivityID),
-    ClientID INTEGER NOT NULL REFERENCES Client(ClientID)   
+    ActivityID INTEGER REFERENCES Activity(ActivityID) ON DELETE SET NULL,
+    ClientID INTEGER REFERENCES Client(ClientID) ON DELETE SET NULL  
 );
 
 DROP TABLE IF EXISTS ActivityType;
@@ -64,8 +65,8 @@ CREATE TABLE ActivityZone(
 
 DROP TABLE IF EXISTS Located;
 CREATE TABLE Located(
-    ActivityTypeID  INTEGER NOT NULL REFERENCES ActivityType(ActivityTypeID),
-    ActivityZoneID INTEGER NOT NULL REFERENCES ActivityZone(ActivityZoneID),
+    ActivityTypeID  INTEGER REFERENCES ActivityType(ActivityTypeID) ON DELETE SET NULL,
+    ActivityZoneID INTEGER REFERENCES ActivityZone(ActivityZoneID) ON DELETE SET NULL,
     PRIMARY KEY(ActivityTypeID,ActivityZoneID)
 );
 
@@ -75,8 +76,8 @@ CREATE TABLE Habitat(
     HName TEXT,
     HOpeningTime TIME,
     HClosingTime TIME,
-    ZoneID INTEGER NOT NULL REFERENCES Zone(ZoneID),
-    CONSTRAINT HOpenBefClose CHECK (ZOpeningTime < ZClosingTime)
+    ZoneID INTEGER REFERENCES Zone(ZoneID),
+    CONSTRAINT HOpenBefClose CHECK (HOpeningTime < HClosingTime)
 );
 
 DROP TABLE IF EXISTS Zone;
@@ -85,9 +86,8 @@ CREATE TABLE Zone(
     ZName CHAR(30) UNIQUE,
     ZOpeningTime TIME,
     ZClosingTime TIME,
-    CONSTRAINT ZOpenBefClsoe CHECK (ZOpeningTime < ZClosingTime)
+    CONSTRAINT ZOpenBefClose CHECK (ZOpeningTime < ZClosingTime)
 );
-
 
 
 DROP TABLE IF EXISTS Animal;
@@ -98,13 +98,13 @@ CREATE TABLE Animal(
     AWeight REAL CONSTRAINT AWeightMin CHECK (AWeight >= 0.0),
     AHeight REAL CONSTRAINT AHeightMin CHECK (AHeight >= 0.0),
     ALength REAL CONSTRAINT ALengthMin CHECK (ALength >= 0.0),
-    SpeciesID INTEGER NOT NULL  REFERENCES Species(SpeciesID)
+    SpeciesID INTEGER REFERENCES Species(SpeciesID) ON DELETE SET NULL
 );
 
 DROP TABLE IF EXISTS Species;
 CREATE TABLE Species(
     SpeciesID INTEGER PRIMARY KEY AUTOINCREMENT,
-    CommonName CHAR(30) NOT NULL ,
+    CommonName CHAR(30) NOT NULL,
     ScientificName  CHAR(30) NOT NULL UNIQUE,
     AverageWeight REAL CONSTRAINT SAvWeightMin CHECK (AverageWeight >= 0.0),
     AverageHeight REAL CONSTRAINT SAvHeightMin CHECK (AverageHeight >= 0.0),
@@ -112,12 +112,12 @@ CREATE TABLE Species(
     NumberCubs INTEGER CONSTRAINT NumberCubsMin CHECK (NumberCubs >= 0),
     Gestation INTEGER CONSTRAINT GestationMin CHECK (Gestation >= 0),
     SexualMaturity INTEGER CONSTRAINT SexualMatMin CHECK (SexualMaturity >= 0),
-    HabitatID INTEGER NOT NULL REFERENCES Habitat(HabitatID),
-    SocialLifeID INTEGER REFERENCES SocialLife(SocialLifeID),
-    DietID INTEGER REFERENCES Diet(DietID),
-    ActivityID INTEGER REFERENCES Activity(ActivityID),
-    ReproductionID INTEGER REFERENCES Reproduction(ReproductionID),
-    AnimalGroupID INTEGER NOT NULL REFERENCES AnimalGroup(AnimalGroupID)
+    HabitatID INTEGER REFERENCES Habitat(HabitatID) ON DELETE CASCADE,
+    SocialLifeID INTEGER REFERENCES SocialLife(SocialLifeID) ON DELETE SET NULL,
+    DietID INTEGER REFERENCES Diet(DietID) ON DELETE SET NULL,
+    ActivityID INTEGER REFERENCES Activity(ActivityID) ON DELETE SET NULL,
+    ReproductionID INTEGER REFERENCES Reproduction(ReproductionID) ON DELETE SET NULL,
+    AnimalGroupID INTEGER REFERENCES AnimalGroup(AnimalGroupID) ON DELETE SET NULL
 );
 
 DROP TABLE IF EXISTS AnimalGroup;
