@@ -9,8 +9,8 @@ VALUES (
     0,
     280727909,
     "Maria Miguel Diogo Figueiredo",
-    02-04-2001,
-    '25'
+    "2001-04-02",
+    25
 );
 
 INSERT INTO Client (
@@ -24,8 +24,8 @@ VALUES (
     1,
     250323906,
     "Ana Rita Antunes Ramada",
-    18-10-2001,
-    '50'
+    "2001-10-18",
+    50
 );
 
 INSERT INTO Client (
@@ -39,8 +39,8 @@ VALUES (
     2,
     237439581,
     "Joaquim da Costa Silva",
-    15-09-1998,
-    '0'
+    "1998-09-15",
+    0
 );
 
 INSERT INTO Client (
@@ -54,8 +54,8 @@ VALUES (
     3,
     248420593,
     "Inês Maria Costa",
-    5-12-1980,
-    '0'
+    "1980-12-56",
+    0
 );
 
 INSERT INTO Client (
@@ -69,8 +69,8 @@ VALUES (
     4,
     266423604,
     "Margarida Fernandes Coelho",
-    27-07-2000,
-    '25'
+    "2000-07-27",
+    25
 );
 
 INSERT INTO Ticket(
@@ -145,7 +145,7 @@ INSERT INTO TicketEntry(
     TicketID   
 )
 VALUES (
-    02-04-2021,
+    "2021-04-02",
     22.50,
     0,
     2
@@ -176,8 +176,6 @@ VALUES (
     "2021-04-02 11:20",
     0
 );
-
-
 
 
 INSERT INTO ActivityTicket(
@@ -335,7 +333,7 @@ INSERT INTO Animal(
 VALUES (
     0,
     "George",
-    17-05-1987,
+    "1987-05-17",
     60,
     100,
     NULL,
