@@ -14,7 +14,7 @@ CREATE TABLE Client(
 DROP TABLE IF EXISTS Ticket;
 CREATE TABLE Ticket(
     TicketID INTEGER PRIMARY KEY AUTOINCREMENT,
-    Type CHAR(30) UNIQUE NOT NULL,
+    TType CHAR(30) UNIQUE NOT NULL,
     TPrice REAL NOT NULL CONSTRAINT TPriceMin CHECK (TPrice >= 0.0),
     TPoints INTEGER NOT NULL CONSTRAINT TPointsMin CHECK (TPoints >= 0.0)
 );
@@ -72,7 +72,7 @@ CREATE TABLE Located(
 
 DROP TABLE IF EXISTS Habitat;
 CREATE TABLE Habitat(
-    Habitat INTEGER PRIMARY KEY AUTOINCREMENT,
+    HabitatID INTEGER PRIMARY KEY AUTOINCREMENT,
     HName TEXT,
     HOpeningTime TIME,
     HClosingTime TIME,
@@ -110,8 +110,8 @@ CREATE TABLE Species(
     AverageHeight REAL CONSTRAINT SAvHeightMin CHECK (AverageHeight >= 0.0),
     AverageLength REAL CONSTRAINT SAvLengthMin CHECK (AverageLength >= 0.0),
     NumberCubs INTEGER CONSTRAINT NumberCubsMin CHECK (NumberCubs >= 0),
-    Gestation INTEGER CONSTRAINT GestationMin CHECK (Gestation >= 0),
-    SexualMaturity INTEGER CONSTRAINT SexualMatMin CHECK (SexualMaturity >= 0),
+    Gestation TEXT,
+    SexualMaturity TEXT,
     HabitatID INTEGER REFERENCES Habitat(HabitatID) ON DELETE CASCADE,
     SocialLifeID INTEGER REFERENCES SocialLife(SocialLifeID) ON DELETE SET NULL,
     DietID INTEGER REFERENCES Diet(DietID) ON DELETE SET NULL,
