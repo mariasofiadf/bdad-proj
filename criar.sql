@@ -5,16 +5,16 @@ PRAGMA foreign_keys = ON;
 DROP TABLE IF EXISTS Client;
 CREATE TABLE Client(
     ClientID INTEGER PRIMARY KEY AUTOINCREMENT,
-    NIF INTEGER UNIQUE,
+    NIF INTEGER NOT NULL UNIQUE,
     ClientName CHAR(30) NOT NULL,
     BirthDate DATE,
     CPoints INTEGER CONSTRAINT CPointsMin CHECK(CPoints >= 0)
 );
 
-DROP TABLE IF EXISTS Ticket;
-CREATE TABLE Ticket(
-    TicketID INTEGER PRIMARY KEY AUTOINCREMENT,
-    TType CHAR(30) UNIQUE NOT NULL,
+DROP TABLE IF EXISTS TicketType;
+CREATE TABLE TicketType(
+    TicketTypeID INTEGER PRIMARY KEY AUTOINCREMENT,
+    TName CHAR(30) NOT NULL UNIQUE,
     TPrice REAL NOT NULL CONSTRAINT TPriceMin CHECK (TPrice >= 0.0),
     TPoints INTEGER NOT NULL CONSTRAINT TPointsMin CHECK (TPoints >= 0.0)
 );
@@ -24,7 +24,7 @@ CREATE TABLE TicketEntry(
     TDate DATE NOT NULL,
     TEPricePaid REAL NOT NULL CONSTRAINT TEPricePaidMin CHECK (TEPricePaid >= 0.0),
     ClientID INTEGER REFERENCES Client(ClientID) ON DELETE SET NULL,
-    TicketID INTEGER REFERENCES Ticket(TicketID) ON DELETE SET NULL
+    TicketTypeID INTEGER REFERENCES TicketType(TicketTypeID) ON DELETE SET NULL
 );
 
 
@@ -60,7 +60,7 @@ CREATE TABLE ActivityType(
 DROP TABLE IF EXISTS ActivityZone;
 CREATE TABLE ActivityZone(
     ActivityZoneID INTEGER PRIMARY KEY AUTOINCREMENT,
-    AtZName TEXT
+    AtZName TEXT UNIQUE
 );
 
 DROP TABLE IF EXISTS Located;
@@ -109,13 +109,13 @@ CREATE TABLE Species(
     AverageWeight REAL CONSTRAINT SAvWeightMin CHECK (AverageWeight >= 0.0),
     AverageHeight REAL CONSTRAINT SAvHeightMin CHECK (AverageHeight >= 0.0),
     AverageLength REAL CONSTRAINT SAvLengthMin CHECK (AverageLength >= 0.0),
-    NumberCubs INTEGER CONSTRAINT NumberCubsMin CHECK (NumberCubs >= 0),
+    NumberCubs TEXT,
     Gestation TEXT,
     SexualMaturity TEXT,
     HabitatID INTEGER REFERENCES Habitat(HabitatID) ON DELETE CASCADE,
     SocialLifeID INTEGER REFERENCES SocialLife(SocialLifeID) ON DELETE SET NULL,
     DietID INTEGER REFERENCES Diet(DietID) ON DELETE SET NULL,
-    ActivityID INTEGER REFERENCES Activity(ActivityID) ON DELETE SET NULL,
+    ActivenessID INTEGER REFERENCES Activeness(ActivenessID) ON DELETE SET NULL,
     ReproductionID INTEGER REFERENCES Reproduction(ReproductionID) ON DELETE SET NULL,
     AnimalGroupID INTEGER REFERENCES AnimalGroup(AnimalGroupID) ON DELETE SET NULL
 );

@@ -73,9 +73,9 @@ VALUES (
     25
 );
 
-INSERT INTO Ticket(
-    TicketID,
-    TType,
+INSERT INTO TicketType(
+    TicketTypeID,
+    TName,
     TPrice,
     TPoints
 )
@@ -86,9 +86,9 @@ VALUES (
     0
 );
 
-INSERT INTO Ticket(
-    TicketID,
-    TType,
+INSERT INTO TicketType(
+    TicketTypeID,
+    TName,
     TPrice,
     TPoints
 )
@@ -99,9 +99,9 @@ VALUES (
     15
 );
 
-INSERT INTO Ticket(
-    TicketID,
-    TType,
+INSERT INTO TicketType(
+    TicketTypeID,
+    TName,
     TPrice,
     TPoints
 )
@@ -112,9 +112,9 @@ VALUES (
     25
 );
 
-INSERT INTO Ticket(
-    TicketID,
-    TType,
+INSERT INTO TicketType(
+    TicketTypeID,
+    TName,
     TPrice,
     TPoints
 )
@@ -125,9 +125,9 @@ VALUES (
     15
 );
 
-INSERT INTO Ticket(
-    TicketID,
-    TType,
+INSERT INTO TicketType(
+    TicketTypeID,
+    TName,
     TPrice,
     TPoints
 )
@@ -142,7 +142,7 @@ INSERT INTO TicketEntry(
     TDate,
     TEPricePaid,
     ClientID,
-    TicketID   
+    TicketTypeID   
 )
 VALUES (
     "2021-04-02",
@@ -221,6 +221,19 @@ VALUES (
     "20:00:00"
 );
 
+INSERT INTO Zone(
+    ZoneID,
+    ZName,
+    ZOpeningTime,
+    ZClosingTime
+)
+VALUES (
+    1,
+    "B",
+    "10:00:00",
+    "19:00:00"
+);
+
 INSERT INTO Habitat(
     HabitatID,
     HName,
@@ -236,6 +249,66 @@ VALUES (
     0
 );
 
+INSERT INTO Habitat(
+    HabitatID,
+    HName,
+    HOpeningTime,
+    HClosingTime,
+    ZoneID
+)
+VALUES (
+    1,
+    "Amazónia",
+    "09:00:00",
+    "19:00:00",
+    0
+);
+
+INSERT INTO Habitat(
+    HabitatID,
+    HName,
+    HOpeningTime,
+    HClosingTime,
+    ZoneID
+)
+VALUES (
+    2,
+    "Floresta Siberiana",
+    "10:00:00",
+    "18:30:00",
+    1
+);
+
+INSERT INTO Habitat(
+    HabitatID,
+    HName,
+    HOpeningTime,
+    HClosingTime,
+    ZoneID
+)
+VALUES (
+    3,
+    "Floresta do Jaguar",
+    "10:00:00",
+    "18:30:00",
+    1
+);
+
+INSERT INTO Habitat(
+    HabitatID,
+    HName,
+    HOpeningTime,
+    HClosingTime,
+    ZoneID
+)
+VALUES (
+    4,
+    "Savana",
+    "10:00:00",
+    "18:30:00",
+    1
+);
+
 
 
 INSERT INTO AnimalGroup(
@@ -247,6 +320,24 @@ VALUES (
     "Primatas"
 );
 
+INSERT INTO AnimalGroup(
+    AnimalGroupID,
+    AGroupName
+)
+VALUES (
+    1,
+    "Aves"
+);
+
+INSERT INTO AnimalGroup(
+    AnimalGroupID,
+    AGroupName
+)
+VALUES (
+    2,
+    "Felinos"
+);
+
 INSERT INTO SocialLife(
     SocialLifeID,
     SLifeName
@@ -256,7 +347,23 @@ VALUES (
     "Familiar"
 );
 
+INSERT INTO SocialLife(
+    SocialLifeID,
+    SLifeName
+)
+VALUES (
+    1,
+    "Casal e Bando"
+);
 
+INSERT INTO SocialLife(
+    SocialLifeID,
+    SLifeName
+)
+VALUES (
+    2,
+    "Solitária"
+);
 
 INSERT INTO Diet(
     DietID,
@@ -265,6 +372,24 @@ INSERT INTO Diet(
 VALUES (
     0,
     "Omnívora"
+);
+
+INSERT INTO Diet(
+    DietID,
+    DietName
+)
+VALUES (
+    1,
+    "Frugívora"
+);
+
+INSERT INTO Diet(
+    DietID,
+    DietName
+)
+VALUES (
+    2,
+    "Carnívora"
 );
 
 INSERT INTO Reproduction(
@@ -276,6 +401,15 @@ VALUES (
     "Vívipara"
 );
 
+INSERT INTO Reproduction(
+    ReproductionID,
+    RepName
+)
+VALUES (
+    1,
+    "Ovípora"
+);
+
 
 INSERT INTO Activeness (
     ActivenessID,
@@ -284,6 +418,24 @@ INSERT INTO Activeness (
 VALUES (
     0,
     "Diurna"
+);
+
+INSERT INTO Activeness (
+    ActivenessID,
+    ActivenessName
+)
+VALUES (
+    1,
+    "Crepuscular"
+);
+
+INSERT INTO Activeness (
+    ActivenessID,
+    ActivenessName
+)
+VALUES (
+    2,
+    "Crepuscular e Noturna"
 );
 
 INSERT INTO Species(
@@ -299,7 +451,7 @@ INSERT INTO Species(
     HabitatID,
     SocialLifeID,
     DietID,
-    ActivityID,
+    ActivenessID,
     ReproductionID,
     AnimalGroupID
 )
@@ -310,8 +462,8 @@ VALUES (
     60,
     95,
     NULL,
-    1,
-    "7-8 meses",
+    "1 cria",
+    "7 a 8 meses",
     "7 anos",
     0,
     0,
@@ -319,6 +471,147 @@ VALUES (
     0,
     0,
     0
+);
+
+
+INSERT INTO Species(
+    SpeciesID,
+    CommonName,
+    ScientificName,
+    AverageWeight,
+    AverageHeight,
+    AverageLength,
+    NumberCubs,
+    Gestation,
+    SexualMaturity,
+    HabitatID,
+    SocialLifeID,
+    DietID,
+    ActivenessID,
+    ReproductionID,
+    AnimalGroupID
+)
+VALUES (
+    1,
+    "Arara-jacinta",
+    "Anodorhynchus hyacinthinus",
+    1.6,
+    NULL,
+    100,
+    "2 a 3 ovos",
+    "27 a 30 dias",
+    "3 anos",
+    1,
+    1,
+    1,
+    0,
+    1,
+    1
+);
+
+INSERT INTO Species(
+    SpeciesID,
+    CommonName,
+    ScientificName,
+    AverageWeight,
+    AverageHeight,
+    AverageLength,
+    NumberCubs,
+    Gestation,
+    SexualMaturity,
+    HabitatID,
+    SocialLifeID,
+    DietID,
+    ActivenessID,
+    ReproductionID,
+    AnimalGroupID
+)
+VALUES (
+    2,
+    "Tigre-da-sibéria",
+    "Panthera tigris altaica",
+    200,
+    100,
+    260,
+    "2 crias",
+    "3 a 4 meses",
+    "3 a 5 anos",
+    2,
+    2,
+    2,
+    1,
+    0,
+    2
+);
+
+INSERT INTO Species(
+    SpeciesID,
+    CommonName,
+    ScientificName,
+    AverageWeight,
+    AverageHeight,
+    AverageLength,
+    NumberCubs,
+    Gestation,
+    SexualMaturity,
+    HabitatID,
+    SocialLifeID,
+    DietID,
+    ActivenessID,
+    ReproductionID,
+    AnimalGroupID
+)
+VALUES (
+    3,
+    "Jaguar",
+    "Panthera onca onca",
+    75,
+    90,
+    143,
+    "1 a 4 crias",
+    "3 a 4 meses",
+    "2 a 4 anos",
+    3,
+    2,
+    2,
+    2,
+    0,
+    2
+);
+
+INSERT INTO Species(
+    SpeciesID,
+    CommonName,
+    ScientificName,
+    AverageWeight,
+    AverageHeight,
+    AverageLength,
+    NumberCubs,
+    Gestation,
+    SexualMaturity,
+    HabitatID,
+    SocialLifeID,
+    DietID,
+    ActivenessID,
+    ReproductionID,
+    AnimalGroupID
+)
+VALUES (
+    4,
+    "Leão-africano",
+    "Panthera leo bleyenberghi",
+    180,
+    120,
+    205,
+    "6 crias",
+    "3,5 meses",
+    "3 a 5 anos",
+    4,
+    0,
+    2,
+    1,
+    0,
+    2
 );
 
 INSERT INTO Animal(
@@ -339,6 +632,121 @@ VALUES (
     NULL,
     0
 );
+
+INSERT INTO Animal(
+    AnimalID,
+    AnimalName,
+    BirthDate,
+    AWeight,
+    AHeight,
+    ALength,
+    SpeciesID
+)
+VALUES (
+    1,
+    "Blu",
+    "2000-10-18",
+    1.5,
+    NULL,
+    105,
+    1
+);
+
+INSERT INTO Animal(
+    AnimalID,
+    AnimalName,
+    BirthDate,
+    AWeight,
+    AHeight,
+    ALength,
+    SpeciesID
+)
+VALUES (
+    2,
+    "Jade",
+    "2005-01-15",
+    1.3,
+    NULL,
+    90,
+    1
+);
+
+INSERT INTO Animal(
+    AnimalID,
+    AnimalName,
+    BirthDate,
+    AWeight,
+    AHeight,
+    ALength,
+    SpeciesID
+)
+VALUES (
+    3,
+    "Richard Parker",
+    "2005-01-15",
+    250,
+    100,
+    270,
+    2
+);
+
+INSERT INTO Animal(
+    AnimalID,
+    AnimalName,
+    BirthDate,
+    AWeight,
+    AHeight,
+    ALength,
+    SpeciesID
+)
+VALUES (
+    4,
+    "Speedy",
+    "2015-08-28",
+    90,
+    95,
+    160,
+    3
+);
+
+INSERT INTO Animal(
+    AnimalID,
+    AnimalName,
+    BirthDate,
+    AWeight,
+    AHeight,
+    ALength,
+    SpeciesID
+)
+VALUES (
+    5,
+    "Simba",
+    "2010-09-02",
+    200,
+    120,
+    190,
+    4
+);
+
+INSERT INTO Animal(
+    AnimalID,
+    AnimalName,
+    BirthDate,
+    AWeight,
+    AHeight,
+    ALength,
+    SpeciesID
+)
+VALUES (
+    6,
+    "Kiara",
+    "2012-05-13",
+    170,
+    120,
+    180,
+    4
+);
+
 
 INSERT INTO Participates(
     AnimalID,
