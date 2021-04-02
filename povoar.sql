@@ -161,8 +161,22 @@ VALUES (
     0,
     "Festa da Banana",
     3,
-    20
+    30
 );
+
+INSERT INTO ActivityType(
+    ActivityTypeID,
+    AtName,
+    AtPrice,
+    Duration
+)
+VALUES (
+    1,
+    "Foto com as Araras",
+    5,
+    30
+);
+
 
 INSERT INTO Activity(
     ActivityID,
@@ -173,8 +187,47 @@ INSERT INTO Activity(
 VALUES (
     0,
     "2021-04-02 11:00",
-    "2021-04-02 11:20",
+    "2021-04-02 11:30",
     0
+);
+
+INSERT INTO Activity(
+    ActivityID,
+    StartTime,
+    EndTime,
+    ActivityTypeID
+)
+VALUES (
+    1,
+    "2021-04-02 15:30",
+    "2021-04-02 16:00",
+    0
+);
+
+INSERT INTO Activity(
+    ActivityID,
+    StartTime,
+    EndTime,
+    ActivityTypeID
+)
+VALUES (
+    2,
+    "2021-04-04 10:00",
+    "2021-04-04 10:30",
+    1
+);
+
+INSERT INTO Activity(
+    ActivityID,
+    StartTime,
+    EndTime,
+    ActivityTypeID
+)
+VALUES (
+    3,
+    "2021-04-04 14:30",
+    "2021-04-04 15:00",
+    1
 );
 
 
@@ -198,6 +251,24 @@ VALUES (
     "Ilha dos Primatas"
 );
 
+INSERT INTO ActivityZone(
+    ActivityZoneID,
+    AtZName
+)
+VALUES (
+    1,
+    "Estúdio das Araras"
+);
+
+
+INSERT INTO Located(
+    ActivityTypeID,
+    ActivityZoneID
+)
+VALUES (
+    1,
+    1
+);
 
 INSERT INTO Located(
     ActivityTypeID,
@@ -234,6 +305,19 @@ VALUES (
     "19:00:00"
 );
 
+INSERT INTO Zone(
+    ZoneID,
+    ZName,
+    ZOpeningTime,
+    ZClosingTime
+)
+VALUES (
+    2,
+    "C",
+    "09:00:00",
+    "20:00:00"
+);
+
 INSERT INTO Habitat(
     HabitatID,
     HName,
@@ -261,7 +345,7 @@ VALUES (
     "Amazónia",
     "09:00:00",
     "19:00:00",
-    0
+    2
 );
 
 INSERT INTO Habitat(
@@ -383,6 +467,14 @@ VALUES (
     "Bando"
 );
 
+INSERT INTO SocialLife(
+    SocialLifeID,
+    SLifeName
+)
+VALUES (
+    5,
+    "Gregária Solitária"
+);
 
 INSERT INTO Diet(
     DietID,
@@ -420,6 +512,33 @@ VALUES (
     "Herbívora"
 );
 
+INSERT INTO Diet(
+    DietID,
+    DietName
+)
+VALUES (
+    4,
+    "Insectívora"
+);
+
+INSERT INTO Diet(
+    DietID,
+    DietName
+)
+VALUES (
+    5,
+    "Granívora"
+);
+
+INSERT INTO Diet(
+    DietID,
+    DietName
+)
+VALUES (
+    6,
+    "Piscívora"
+);
+
 INSERT INTO Reproduction(
     ReproductionID,
     RepName
@@ -436,6 +555,15 @@ INSERT INTO Reproduction(
 VALUES (
     1,
     "Ovípora"
+);
+
+INSERT INTO Reproduction(
+    ReproductionID,
+    RepName
+)
+VALUES (
+    2,
+    "Ovovivípara"
 );
 
 
@@ -464,6 +592,15 @@ INSERT INTO Activeness (
 VALUES (
     2,
     "Crepuscular e Noturna"
+);
+
+INSERT INTO Activeness (
+    ActivenessID,
+    ActivenessName
+)
+VALUES (
+    3,
+    "Noturna"
 );
 
 INSERT INTO Species(
@@ -888,6 +1025,52 @@ INSERT INTO Participates(
     ActivityID
 )
 VALUES (
-    0,
+    0, --George
     0
 );
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    7, --Rei Julien
+    0
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    0, --George
+    1
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    7, --Rei Julien
+    1
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    1, --Blue
+    2 --First photos of the day
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    2, --Jade
+    3  --Last photos of the day
+);
+
