@@ -54,7 +54,7 @@ VALUES (
     3,
     248420593,
     "Inês Maria Costa",
-    "1980-12-56",
+    "2015-12-06",
     0
 );
 
@@ -125,19 +125,6 @@ VALUES (
     15
 );
 
-INSERT INTO TicketType(
-    TicketTypeID,
-    TName,
-    TPrice,
-    TPoints
-)
-VALUES (
-    4,
-    "Grupo",
-    18.50,
-    20
-);
-
 INSERT INTO TicketEntry(
     TDate,
     TEPricePaid,
@@ -148,7 +135,46 @@ VALUES (
     "2021-04-02",
     22.50,
     0,
-    2
+    2 --Adulto
+);
+
+INSERT INTO TicketEntry(
+    TDate,
+    TEPricePaid,
+    ClientID,
+    TicketTypeID
+)
+VALUES (
+    "2021-04-02",
+    16.0,
+    1,
+    3 --Senior
+);
+
+INSERT INTO TicketEntry(
+    TDate,
+    TEPricePaid,
+    ClientID,
+    TicketTypeID
+)
+VALUES (
+    "2021-04-04",
+    22.50,
+    2,
+    2 --Adulto
+);
+
+INSERT INTO TicketEntry(
+    TDate,
+    TEPricePaid,
+    ClientID,
+    TicketTypeID
+)
+VALUES (
+    "2021-04-04",
+    14.50,
+    3,
+    1 --Criança
 );
 
 INSERT INTO ActivityType(
@@ -239,6 +265,35 @@ VALUES (
     0,
     0
 );
+
+
+INSERT INTO ActivityTicket(
+    ActivityID,
+    ClientID
+)
+VALUES (
+    1,
+    1
+);
+
+INSERT INTO ActivityTicket(
+    ActivityID,
+    ClientID
+)
+VALUES (
+    2,
+    2
+);
+
+INSERT INTO ActivityTicket(
+    ActivityID,
+    ClientID
+)
+VALUES (
+    2,
+    3
+);
+
 
 
 
