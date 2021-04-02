@@ -365,6 +365,25 @@ VALUES (
     "Solitária"
 );
 
+INSERT INTO SocialLife(
+    SocialLifeID,
+    SLifeName
+)
+VALUES (
+    3,
+    "Gregária"
+);
+
+INSERT INTO SocialLife(
+    SocialLifeID,
+    SLifeName
+)
+VALUES (
+    4,
+    "Bando"
+);
+
+
 INSERT INTO Diet(
     DietID,
     DietName
@@ -390,6 +409,15 @@ INSERT INTO Diet(
 VALUES (
     2,
     "Carnívora"
+);
+
+INSERT INTO Diet(
+    DietID,
+    DietName
+)
+VALUES (
+    3,
+    "Herbívora"
 );
 
 INSERT INTO Reproduction(
@@ -614,6 +642,76 @@ VALUES (
     2
 );
 
+INSERT INTO Species(
+    SpeciesID,
+    CommonName,
+    ScientificName,
+    AverageWeight,
+    AverageHeight,
+    AverageLength,
+    NumberCubs,
+    Gestation,
+    SexualMaturity,
+    HabitatID,
+    SocialLifeID,
+    DietID,
+    ActivenessID,
+    ReproductionID,
+    AnimalGroupID
+)
+VALUES (
+    5,
+    "Lémure-de-cauda-anelada",
+    "Lemur catta",
+    2.75,
+    NULL,
+    60,
+    "1 a 2 crias",
+    "4 a 5 meses",
+    "2 anos",
+    0,
+    3,
+    3,
+    0,
+    0,
+    0
+);
+
+INSERT INTO Species(
+    SpeciesID,
+    CommonName,
+    ScientificName,
+    AverageWeight,
+    AverageHeight,
+    AverageLength,
+    NumberCubs,
+    Gestation,
+    SexualMaturity,
+    HabitatID,
+    SocialLifeID,
+    DietID,
+    ActivenessID,
+    ReproductionID,
+    AnimalGroupID
+)
+VALUES (
+    6,
+    "Tucano-toco",
+    "Ramphastos toco",
+    0.540,
+    NULL,
+    56,
+    "4 a 6 ovos",
+    "16 a 20 dias",
+    "1 ano",
+    1,
+    4,
+    0,
+    0,
+    1,
+    1
+);
+
 INSERT INTO Animal(
     AnimalID,
     AnimalName,
@@ -631,6 +729,25 @@ VALUES (
     100,
     NULL,
     0
+);
+
+INSERT INTO Animal(
+    AnimalID,
+    AnimalName,
+    BirthDate,
+    AWeight,
+    AHeight,
+    ALength,
+    SpeciesID
+)
+VALUES (
+    7,
+    "Rei Julien",
+    "2010-11-05",
+    2.8,
+    NULL,
+    50,
+    5
 );
 
 INSERT INTO Animal(
@@ -747,6 +864,24 @@ VALUES (
     4
 );
 
+INSERT INTO Animal(
+    AnimalID,
+    AnimalName,
+    BirthDate,
+    AWeight,
+    AHeight,
+    ALength,
+    SpeciesID
+)
+VALUES (
+    8,
+    "Zazu",
+    "2012-05-13",
+    0.550,
+    NULL,
+    58,
+    6
+);
 
 INSERT INTO Participates(
     AnimalID,
