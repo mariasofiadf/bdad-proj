@@ -296,46 +296,6 @@ VALUES (
     3
 );
 
-
-
-
-INSERT INTO ActivityZone(
-    ActivityZoneID,
-    AtZName
-)
-VALUES (
-    0,
-    "Ilha dos Primatas"
-);
-
-INSERT INTO ActivityZone(
-    ActivityZoneID,
-    AtZName
-)
-VALUES (
-    1,
-    "Estúdio das Araras"
-);
-
-
-INSERT INTO Located(
-    ActivityTypeID,
-    ActivityZoneID
-)
-VALUES (
-    1,
-    1
-);
-
-INSERT INTO Located(
-    ActivityTypeID,
-    ActivityZoneID
-)
-VALUES (
-    0,
-    0
-);
-
 INSERT INTO Zone(
     ZoneID,
     ZName,
@@ -374,6 +334,49 @@ VALUES (
     "09:00:00",
     "20:00:00"
 );
+
+INSERT INTO ActivityZone(
+    ActivityZoneID,
+    AtZName,
+    ZoneID
+)
+VALUES (
+    0,
+    "Ilha dos Primatas",
+    0
+);
+
+INSERT INTO ActivityZone(
+    ActivityZoneID,
+    AtZName,
+    ZoneID
+)
+VALUES (
+    1,
+    "Estúdio das Araras",
+    2
+);
+
+
+INSERT INTO Located(
+    ActivityTypeID,
+    ActivityZoneID
+)
+VALUES (
+    1,
+    1
+);
+
+INSERT INTO Located(
+    ActivityTypeID,
+    ActivityZoneID
+)
+VALUES (
+    0,
+    0
+);
+
+
 
 INSERT INTO Habitat(
     HabitatID,
