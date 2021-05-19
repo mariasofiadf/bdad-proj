@@ -318,7 +318,7 @@ INSERT INTO Zone(
 VALUES (
     1,
     "B",
-    "10:00:00",
+    "09:00:00",
     "19:00:00"
 );
 
@@ -418,8 +418,8 @@ INSERT INTO Habitat(
 VALUES (
     2,
     "Floresta Siberiana",
-    "10:00:00",
-    "18:30:00",
+    "09:00:00",
+    "17:30:00",
     1
 );
 
