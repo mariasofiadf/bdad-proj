@@ -5,6 +5,7 @@
 
 .print ''
 .print ''  
+
 --Animais que vivem num Habitat específico()
 
 SELECT animalname, commonname,  hname
