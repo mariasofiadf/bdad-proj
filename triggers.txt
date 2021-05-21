@@ -1,0 +1,38 @@
+Pontos para os clientes
+DROP TRIGGER if EXISTS addPoints;
+CREATE TRIGGER addPoints
+Before INSERT oN TicketEntry
+for EACH ROW
+begin 
+	UPDATE Client
+    set cpoints = cpoints + (SELECT tpoints from TicketType WHERE tickettypeid = New.tickettypeid)
+    WHERE Client.ClientID = New.ClientID;
+end;
+------------------------------
+
+Habitats com animais do mesmo grupo
+CREATE TRIGGER IF NOT EXISTS placeSpecies
+Before INSERT oN Species
+for EACH ROW
+when EXISTS (SELECT * from Species WHERE Species.habitatid = new.HabitatID 
+             and Species.animalgroupid != new.animalgroupid)
+begin 
+	SELECT RAISE(ABORT, "Habitat inválido. Habitat com es+écies de outro grupo");
+
+end;
+
+-------------------------
+Horário dos habitats como 
+DROP TRIGGER if EXISTS checkTime;
+CREATE TRIGGER checkTime
+After UPDATE oN Zone
+for EACH ROW
+
+begin
+	update Habitat
+    set hopeningtime = new.zopeningtime
+    where (new.zopeningtime > hopeningtime and new.zoneid = Habitat.zoneid);
+    update Habitat
+    set hclosingtime = new.zclosingtime
+    where (new.zclosingtime < hclosingtime and new.zoneid = Habitat.zoneid);
+end;
