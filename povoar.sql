@@ -179,6 +179,47 @@ VALUES (
     1 --Criança
 );
 
+
+INSERT INTO TicketEntry(
+    TDate,
+    TEPricePaid,
+    ClientID,
+    TicketTypeID   
+)
+VALUES (
+    "2021-06-02",
+    22.50,
+    0,
+    2 --Adulto
+);
+
+INSERT INTO TicketEntry(
+    TDate,
+    TEPricePaid,
+    ClientID,
+    TicketTypeID
+)
+VALUES (
+    "2021-05-04",
+    22.50,
+    2,
+    2 --Adulto
+);
+
+INSERT INTO TicketEntry(
+    TDate,
+    TEPricePaid,
+    ClientID,
+    TicketTypeID
+)
+VALUES (
+    "2021-05-04",
+    14.50,
+    3,
+    1 --Criança
+);
+
+
 INSERT INTO ActivityType(
     ActivityTypeID,
     AtName,
