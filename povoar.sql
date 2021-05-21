@@ -1229,6 +1229,36 @@ INSERT INTO Participates(
     ActivityID
 )
 VALUES (
+    2, --Blue
+    2 --First photos of the day
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    1, --Jade
+    3  --Last photos of the day
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    8, --Zazu
+    3  --Last photos of the day
+);
+
+
+
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
     2, --Jade
     3  --Last photos of the day
 );

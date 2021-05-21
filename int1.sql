@@ -2,43 +2,15 @@
 .headers	on
 .nullvalue	NULL
 
+
+.print ''
+.print ''  
 --Animais que vivem num Habitat específico()
 
-SELECT animalname, commonname, scientificname 
+SELECT animalname, commonname,  hname
 FROM Animal, Species, Habitat
 WHERE (Animal.speciesid = Species.speciesid 
-       and Species.habitatid = Habitat.habitatid 
-       and Habitat.hname = "Amazónia");
+       and Species.habitatid = Habitat.habitatid)
+GROUP by hname, animalname;
 
-.print ''
-.print ''  
 
-SELECT animalname, commonname, scientificname 
-FROM Animal, Species, Habitat
-WHERE (Animal.speciesid = Species.speciesid 
-       and Species.habitatid = Habitat.habitatid 
-       and Habitat.hname = "Templo dos Primatas");
-
-.print ''
-.print ''  
-SELECT animalname, commonname, scientificname 
-FROM Animal, Species, Habitat
-WHERE (Animal.speciesid = Species.speciesid 
-       and Species.habitatid = Habitat.habitatid 
-       and Habitat.hname = "Floresta Siberiana");
-
-.print ''
-.print ''  
-SELECT animalname, commonname, scientificname 
-FROM Animal, Species, Habitat
-WHERE (Animal.speciesid = Species.speciesid 
-       and Species.habitatid = Habitat.habitatid 
-       and Habitat.hname = "Floresta do Jaguar");
-
-.print ''
-.print ''       
-SELECT animalname, commonname, scientificname 
-FROM Animal, Species, Habitat
-WHERE (Animal.speciesid = Species.speciesid 
-       and Species.habitatid = Habitat.habitatid 
-       and Habitat.hname = "Savana");
