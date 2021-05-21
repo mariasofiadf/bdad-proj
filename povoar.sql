@@ -144,6 +144,32 @@ INSERT INTO TicketEntry(
     TDate,
     TEPricePaid,
     ClientID,
+    TicketTypeID   
+)
+VALUES (
+    "2021-05-25",
+    22.50,
+    0,
+    2 --Adulto
+);
+
+INSERT INTO TicketEntry(
+    TDate,
+    TEPricePaid,
+    ClientID,
+    TicketTypeID   
+)
+VALUES (
+    "2021-05-26",
+    22.50,
+    3,
+    2 --Adulto
+);
+
+INSERT INTO TicketEntry(
+    TDate,
+    TEPricePaid,
+    ClientID,
     TicketTypeID
 )
 VALUES (
@@ -319,6 +345,16 @@ INSERT INTO ActivityTicket(
 VALUES (
     4,
     0
+);
+
+
+INSERT INTO ActivityTicket(
+    ActivityID,
+    ClientID
+)
+VALUES (
+    3, -- Jade, Fotos
+    0 -- Maria
 );
 
 

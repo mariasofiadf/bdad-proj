@@ -2,7 +2,7 @@
 .headers	on
 .nullvalue	NULL
 
---Animais que vivem num Habitat específico
+--Animais que vivem num Habitat específico()
 
 SELECT animalname, commonname, scientificname 
 FROM Animal, Species, Habitat

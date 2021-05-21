@@ -3,6 +3,7 @@
 .nullvalue	NULL
 
 --Animal mais pesado de cada espécie
+--segundo animal mais pesado sem usar max() e o limit()
 SELECT commonname, animalname, maxWeight
 from (SELECT commonname, animalid, Animal.speciesid, max(aweight) maxWeight
       FROM Animal, Species WHERE Animal.speciesid = species.speciesid
