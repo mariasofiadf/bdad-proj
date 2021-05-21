@@ -299,6 +299,28 @@ VALUES (
     1
 );
 
+INSERT INTO Activity(
+    ActivityID,
+    StartTime,
+    EndTime,
+    ActivityTypeID
+)
+VALUES (
+    4,
+    "2021-04-06 14:30",
+    "2021-04-06 15:00",
+    0
+);
+
+INSERT INTO ActivityTicket(
+    ActivityID,
+    ClientID
+)
+VALUES (
+    4,
+    0
+);
+
 
 INSERT INTO ActivityTicket(
     ActivityID,
