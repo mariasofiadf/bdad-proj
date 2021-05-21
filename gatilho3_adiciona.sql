@@ -1,3 +1,6 @@
+--Verifica se o tempo de um habitat bate certo com da zona onde se encontra
+--Caso não esteja, dá update do horário dos habitats
+
 CREATE TRIGGER IF NOT EXISTS checkTime
 After UPDATE ON Zone
 FOR EACH ROW

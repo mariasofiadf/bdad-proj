@@ -1,4 +1,4 @@
-
+--Adicionar pontos ao cliente quando este compra um bilhete de entrada
 CREATE TRIGGER IF NOT EXISTS addPoints
 Before INSERT ON TicketEntry
 FOR EACH ROW
