@@ -2,6 +2,7 @@
 .headers	on
 .nullvalue	NULL
 
+--Número de participações de cada animal numa atividade, por mês
 drop VIEW if EXISTS ParticipationsPerMonthPerActivity;
 create view ParticipationsPerMonthPerActivity
 as SELECT ActivityType.activitytypeid, Animal.animalid,  strftime('%m', starttime) as month,
@@ -12,8 +13,8 @@ where (Animal.animalid = Participates.animalid and
       and Activity.activitytypeid = ActivityType.activitytypeid)
 GROUP by Activity.activitytypeid, Animal.animalid, month, aYear;
 
-SELECT * from ParticipationsPerMonthPerActivity;
 
+--Número de espetáculos de cada atividade por mês
 drop VIEW if EXISTS ActiTypeCountPerMonth;
 create view ActiTypeCountPerMonth
 as SELECT ActivityType.ActivityTypeID, 
@@ -23,7 +24,6 @@ from Activity, ActivityType
 WHERE (Activity.activitytypeid = ActivityType.activitytypeid)
 GROUP by  Activity.activitytypeid, month, aYear;
 
-SELECT * from ActiTypeCountPerMonth;
 
 --Nome dos animais que participaram em todas os espetáculos do mês de determinada atividade
 SELECT atname, animalname, ACM.month, PMA.aYear

@@ -2,7 +2,7 @@
 .headers	on
 .nullvalue	NULL
 
---Percentagem de espécies em cada habitat
+
 drop VIEW if EXISTS AnimalHabitat;
 create view AnimalHabitat
 as SELECT  Habitat.habitatid , hname,  Species.speciesid, commonname
@@ -24,7 +24,7 @@ as select habitatid, speciesid, count(*) as SpeciesCount
 from AnimalHabitat
 group BY SpeciesID;
 
-
+--[FINAL] Percentagem de uma espécie em cada habitat
 SELECT DISTINCT hname as Habitat,  commonname as Species,
 round(SpeciesCount * 1.0 /TotalOfAnimals *100, 2 )as Percentage
 from AnimalHabitatCount, AnimalHabitat, SpeciesHabitatCount
