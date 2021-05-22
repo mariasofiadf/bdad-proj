@@ -241,7 +241,7 @@ INSERT INTO TicketEntry(
 VALUES (
     "2021-04-04",
     14.50,
-    2, --Inês
+    3, --Inês
     1 --Criança
 );
 
@@ -267,7 +267,7 @@ INSERT INTO TicketEntry(
 VALUES (
     "2021-04-15",
     14.50,
-    2, --Inês
+    3, --Inês
     1 --Criança
 );
 
@@ -293,7 +293,7 @@ INSERT INTO TicketEntry(
 VALUES (
     "2021-05-01",
     14.50,
-    2, --Inês
+    3, --Inês
     1 --Criança
 );
 
@@ -319,7 +319,7 @@ INSERT INTO TicketEntry(
 VALUES (
     "2021-05-21",
     14.50,
-    2, --Inês
+    3, --Inês
     1 --Criança
 );
 
@@ -345,7 +345,7 @@ INSERT INTO TicketEntry(
 VALUES (
     "2021-06-05",
     14.50,
-    2, --Inês
+    3, --Inês
     1 --Criança
 );
 
@@ -358,7 +358,7 @@ INSERT INTO TicketEntry(
 VALUES (
     "2021-04-20",
     22.50,
-    3, --Margarida
+    4, --Margarida
     2 --Adulto
 );
 
@@ -371,7 +371,7 @@ INSERT INTO TicketEntry(
 VALUES (
     "2021-05-05",
     22.50,
-    3, --Margarida
+    4, --Margarida
     2 --Adulto
 );
 
@@ -384,7 +384,7 @@ INSERT INTO TicketEntry(
 VALUES (
     "2021-05-16",
     22.50,
-    3, --Margarida
+    4, --Margarida
     2 --Adulto
 );
 
