@@ -796,8 +796,41 @@ VALUES (
     2
 );
 
+INSERT INTO ActivityTicket(
+    ActivityID,
+    ClientID
+)
+VALUES (
+    0,
+    0 --Maria
+);
 
+INSERT INTO ActivityTicket(
+    ActivityID,
+    ClientID
+)
+VALUES (
+    6,
+    0 --Maria
+);
 
+INSERT INTO ActivityTicket(
+    ActivityID,
+    ClientID
+)
+VALUES (
+    7,
+    0 --Maria
+);
+
+INSERT INTO ActivityTicket(
+    ActivityID,
+    ClientID
+)
+VALUES (
+    27,
+    0 --Maria
+);
 
 INSERT INTO ActivityTicket(
     ActivityID,
@@ -805,37 +838,7 @@ INSERT INTO ActivityTicket(
 )
 VALUES (
     4,
-    0
-);
-
-
-INSERT INTO ActivityTicket(
-    ActivityID,
-    ClientID
-)
-VALUES (
-    3, -- Jade, Fotos
-    0 -- Maria
-);
-
-
-INSERT INTO ActivityTicket(
-    ActivityID,
-    ClientID
-)
-VALUES (
-    0,
-    0
-);
-
-
-INSERT INTO ActivityTicket(
-    ActivityID,
-    ClientID
-)
-VALUES (
-    1,
-    1
+    0 --Maria
 );
 
 INSERT INTO ActivityTicket(
@@ -844,7 +847,7 @@ INSERT INTO ActivityTicket(
 )
 VALUES (
     2,
-    2
+    1 --Rita
 );
 
 INSERT INTO ActivityTicket(
@@ -852,8 +855,237 @@ INSERT INTO ActivityTicket(
     ClientID
 )
 VALUES (
-    2,
-    3
+    3,
+    1 --Rita
+);
+
+INSERT INTO ActivityTicket(
+    ActivityID,
+    ClientID
+)
+VALUES (
+    4,
+    1 --Rita
+);
+
+INSERT INTO ActivityTicket(
+    ActivityID,
+    ClientID
+)
+VALUES (
+    5,
+    1 --Rita
+);
+
+INSERT INTO ActivityTicket(
+    ActivityID,
+    ClientID
+)
+VALUES (
+    25,
+    1 --Rita
+);
+
+INSERT INTO ActivityTicket(
+    ActivityID,
+    ClientID
+)
+VALUES (
+    26,
+    1 --Rita
+);
+
+
+INSERT INTO ActivityTicket(
+    ActivityID,
+    ClientID
+)
+VALUES (
+    8,
+    2 --Joaquim
+);
+
+INSERT INTO ActivityTicket(
+    ActivityID,
+    ClientID
+)
+VALUES (
+    8,
+    3 --Inês
+);
+
+INSERT INTO ActivityTicket(
+    ActivityID,
+    ClientID
+)
+VALUES (
+    9,
+    2 --Joaquim
+);
+
+INSERT INTO ActivityTicket(
+    ActivityID,
+    ClientID
+)
+VALUES (
+    9,
+    3 --Inês
+);
+
+INSERT INTO ActivityTicket(
+    ActivityID,
+    ClientID
+)
+VALUES (
+    10,
+    2 --Joaquim
+);
+
+INSERT INTO ActivityTicket(
+    ActivityID,
+    ClientID
+)
+VALUES (
+    10,
+    3 --Inês
+);
+
+
+INSERT INTO ActivityTicket(
+    ActivityID,
+    ClientID
+)
+VALUES (
+    11,
+    2 --Joaquim
+);
+
+INSERT INTO ActivityTicket(
+    ActivityID,
+    ClientID
+)
+VALUES (
+    11,
+    3 --Inês
+);
+
+INSERT INTO ActivityTicket(
+    ActivityID,
+    ClientID
+)
+VALUES (
+    14,
+    2 --Joaquim
+);
+
+INSERT INTO ActivityTicket(
+    ActivityID,
+    ClientID
+)
+VALUES (
+    14,
+    3 --Inês
+);
+
+INSERT INTO ActivityTicket(
+    ActivityID,
+    ClientID
+)
+VALUES (
+    15,
+    2 --Joaquim
+);
+
+INSERT INTO ActivityTicket(
+    ActivityID,
+    ClientID
+)
+VALUES (
+    15,
+    3 --Inês
+);
+
+
+INSERT INTO ActivityTicket(
+    ActivityID,
+    ClientID
+)
+VALUES (
+    22,
+    2 --Joaquim
+);
+
+INSERT INTO ActivityTicket(
+    ActivityID,
+    ClientID
+)
+VALUES (
+    22,
+    3 --Inês
+);
+
+
+INSERT INTO ActivityTicket(
+    ActivityID,
+    ClientID
+)
+VALUES (
+    26,
+    2 --Joaquim
+);
+
+INSERT INTO ActivityTicket(
+    ActivityID,
+    ClientID
+)
+VALUES (
+    26,
+    3 --Inês
+);
+
+INSERT INTO ActivityTicket(
+    ActivityID,
+    ClientID
+)
+VALUES (
+    12,
+    4 --Margarida
+);
+
+INSERT INTO ActivityTicket(
+    ActivityID,
+    ClientID
+)
+VALUES (
+    13,
+    4 --Margarida
+);
+
+INSERT INTO ActivityTicket(
+    ActivityID,
+    ClientID
+)
+VALUES (
+    16,
+    4 --Margarida
+);
+
+INSERT INTO ActivityTicket(
+    ActivityID,
+    ClientID
+)
+VALUES (
+    17,
+    4 --Margarida
+);
+
+INSERT INTO ActivityTicket(
+    ActivityID,
+    ClientID
+)
+VALUES (
+    21,
+    4 --Margarida
 );
 
 INSERT INTO Zone(
