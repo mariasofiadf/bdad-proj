@@ -272,6 +272,19 @@ VALUES (
     30
 );
 
+INSERT INTO ActivityType(
+    ActivityTypeID,
+    AtName,
+    AtPrice,
+    Duration
+)
+VALUES (
+    2,
+    "Alimentação dos Tigres",
+    4,
+    20
+);
+
 
 INSERT INTO Activity(
     ActivityID,
@@ -307,6 +320,84 @@ INSERT INTO Activity(
 )
 VALUES (
     2,
+    "2021-04-05 11:00",
+    "2021-04-05 11:30",
+    0
+);
+
+INSERT INTO Activity(
+    ActivityID,
+    StartTime,
+    EndTime,
+    ActivityTypeID
+)
+VALUES (
+    3,
+    "2021-04-05 15:30",
+    "2021-04-05 16:00",
+    0
+);
+
+INSERT INTO Activity(
+    ActivityID,
+    StartTime,
+    EndTime,
+    ActivityTypeID
+)
+VALUES (
+    4,
+    "2021-05-10 11:00",
+    "2021-05-10 11:30",
+    0
+);
+
+INSERT INTO Activity(
+    ActivityID,
+    StartTime,
+    EndTime,
+    ActivityTypeID
+)
+VALUES (
+    5,
+    "2021-05-10 15:30",
+    "2021-05-10 16:00",
+    0
+);
+
+INSERT INTO Activity(
+    ActivityID,
+    StartTime,
+    EndTime,
+    ActivityTypeID
+)
+VALUES (
+    6,
+    "2021-05-14 11:00",
+    "2021-05-14 11:30",
+    0
+);
+
+INSERT INTO Activity(
+    ActivityID,
+    StartTime,
+    EndTime,
+    ActivityTypeID
+)
+VALUES (
+    7,
+    "2021-05-14 15:30",
+    "2021-05-14 16:00",
+    0
+);
+
+INSERT INTO Activity(
+    ActivityID,
+    StartTime,
+    EndTime,
+    ActivityTypeID
+)
+VALUES (
+    8,
     "2021-04-04 10:00",
     "2021-04-04 10:30",
     1
@@ -319,9 +410,23 @@ INSERT INTO Activity(
     ActivityTypeID
 )
 VALUES (
-    3,
+    9,
     "2021-04-04 14:30",
     "2021-04-04 15:00",
+    1
+);
+
+
+INSERT INTO Activity(
+    ActivityID,
+    StartTime,
+    EndTime,
+    ActivityTypeID
+)
+VALUES (
+    10,
+    "2021-04-15 10:00",
+    "2021-04-15 10:30",
     1
 );
 
@@ -332,11 +437,224 @@ INSERT INTO Activity(
     ActivityTypeID
 )
 VALUES (
-    4,
-    "2021-04-06 14:30",
-    "2021-04-06 15:00",
-    0
+    11,
+    "2021-04-15 14:30",
+    "2021-04-15 15:00",
+    1
 );
+
+
+INSERT INTO Activity(
+    ActivityID,
+    StartTime,
+    EndTime,
+    ActivityTypeID
+)
+VALUES (
+    12,
+    "2021-04-20 10:00",
+    "2021-04-20 10:30",
+    1
+);
+
+INSERT INTO Activity(
+    ActivityID,
+    StartTime,
+    EndTime,
+    ActivityTypeID
+)
+VALUES (
+    13,
+    "2021-04-20 14:30",
+    "2021-04-20 15:00",
+    1
+);
+
+
+INSERT INTO Activity(
+    ActivityID,
+    StartTime,
+    EndTime,
+    ActivityTypeID
+)
+VALUES (
+    14,
+    "2021-05-01 10:00",
+    "2021-05-01 10:30",
+    1
+);
+
+INSERT INTO Activity(
+    ActivityID,
+    StartTime,
+    EndTime,
+    ActivityTypeID
+)
+VALUES (
+    15,
+    "2021-05-01 14:30",
+    "2021-05-01 15:00",
+    1
+);
+
+
+INSERT INTO Activity(
+    ActivityID,
+    StartTime,
+    EndTime,
+    ActivityTypeID
+)
+VALUES (
+    16,
+    "2021-05-05 10:00",
+    "2021-05-05 10:30",
+    1
+);
+
+INSERT INTO Activity(
+    ActivityID,
+    StartTime,
+    EndTime,
+    ActivityTypeID
+)
+VALUES (
+    17,
+    "2021-05-05 14:30",
+    "2021-05-05 15:00",
+    1
+);
+
+INSERT INTO Activity(
+    ActivityID,
+    StartTime,
+    EndTime,
+    ActivityTypeID
+)
+VALUES (
+    18,
+    "2021-05-01 10:00",
+    "2021-05-01 10:40",
+    1
+);
+
+INSERT INTO Activity(
+    ActivityID,
+    StartTime,
+    EndTime,
+    ActivityTypeID
+)
+VALUES (
+    19,
+    "2021-05-06 10:00",
+    "2021-05-06 10:40",
+    1
+);
+INSERT INTO Activity(
+    ActivityID,
+    StartTime,
+    EndTime,
+    ActivityTypeID
+)
+VALUES (
+    20,
+    "2021-05-11 10:00",
+    "2021-05-11 10:40",
+    1
+);
+
+INSERT INTO Activity(
+    ActivityID,
+    StartTime,
+    EndTime,
+    ActivityTypeID
+)
+VALUES (
+    21,
+    "2021-05-16 10:00",
+    "2021-05-16 10:40",
+    1
+);
+
+INSERT INTO Activity(
+    ActivityID,
+    StartTime,
+    EndTime,
+    ActivityTypeID
+)
+VALUES (
+    22,
+    "2021-05-21 10:00",
+    "2021-05-21 10:40",
+    1
+);
+
+INSERT INTO Activity(
+    ActivityID,
+    StartTime,
+    EndTime,
+    ActivityTypeID
+)
+VALUES (
+    23,
+    "2021-05-26 10:00",
+    "2021-05-26 10:40",
+    1
+);
+
+INSERT INTO Activity(
+    ActivityID,
+    StartTime,
+    EndTime,
+    ActivityTypeID
+)
+VALUES (
+    24,
+    "2021-05-26 10:00",
+    "2021-05-26 10:40",
+    1
+);
+
+INSERT INTO Activity(
+    ActivityID,
+    StartTime,
+    EndTime,
+    ActivityTypeID
+)
+VALUES (
+    25,
+    "2021-05-31 10:00",
+    "2021-05-31 10:40",
+    1
+);
+
+INSERT INTO Activity(
+    ActivityID,
+    StartTime,
+    EndTime,
+    ActivityTypeID
+)
+VALUES (
+    26,
+    "2021-06-05 10:00",
+    "2021-06-05 10:40",
+    1
+);
+
+INSERT INTO Activity(
+    ActivityID,
+    StartTime,
+    EndTime,
+    ActivityTypeID
+)
+VALUES (
+    27,
+    "2021-04-26 10:00",
+    "2021-04-26 10:40",
+    1
+);
+
+
+
 
 INSERT INTO ActivityTicket(
     ActivityID,
