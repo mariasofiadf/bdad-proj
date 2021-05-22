@@ -2,7 +2,6 @@
 .headers	on
 .nullvalue	NULL
 
---[FINAL] Proporção em que um animal participa em atividades com outro
 
 --Number of activities with more than two animals participating
 --drop VIEW if EXISTS activitiesWithMoreThan2;
@@ -29,17 +28,8 @@ as SELECT Participates.activityid,animalname, Animal.animalid
 from  Animal, Participates
 where(Participates.animalid = Animal.animalid);
       
-SELECT * from ActivityAnimalData;
 
---Animals participating with eachother
---drop VIEW if EXISTS ParticipationDuo;
---create view ParticipationDuo
---as SELECT A1.activityid, A1.animalid as IDAnimal1, A1.animalname as Animal1 ,  A2.animalname as Animal2
---from animal2 as A1, animal2 as A2 
---where(Animal1 <> Animal2 and A1.activityid = A2.activityid );
-
---SELECT * from ParticipationDuo;
-
+--
 drop VIEW if EXISTS ParticipationDuoCount;
 create view ParticipationDuoCount
 as SELECT IDAnimal1, Animal1, Animal2, count (*) as DuoCount 
@@ -48,9 +38,8 @@ from (SELECT   A1.animalid as IDAnimal1, A1.animalname as Animal1 , A2.animalnam
 	where(Animal1 <> Animal2 and A1.activityid = A2.activityid ))
 GROUP By Animal2, Animal1;
 
-SELECT * from ParticipationDuoCount;
 
---[FINAL]
+--[FINAL] Proporção em que um animal participa em atividades com outro
 SELECT Animal1, nParticipations, Animal2, DuoCount, round((duoCount *1.0/nParticipations) * 100, 2) as DuoParticipationRate
 from ParticipationDuoCount, numberOfParticipations 
 where (numberOfParticipations.animalid = ParticipationDuoCount.IDAnimal1);

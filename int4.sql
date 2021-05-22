@@ -2,7 +2,7 @@
 .headers	on
 .nullvalue	NULL
 
---Nome dos animais que o cliente viu nos espetáculos e a data do respetivo espétáculo
+--    
 --Se tiver visto o animal mais que uma vez, aparece a mais recente [Menos Perminente]
 
 drop VIEW if EXISTS ActivityData;

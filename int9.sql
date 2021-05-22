@@ -10,7 +10,7 @@ FROM Animal, Species, Habitat
 WHERE (Animal.speciesid = Species.speciesid 
        and Species.habitatid = Habitat.habitatid);
        
---Número de total de animais em cada habitat
+--Número total de animais em cada habitat
 drop VIEW if EXISTS AnimalHabitatCount;
 create view AnimalHabitatCount
 as select habitatid, count(*) as TotalOfAnimals

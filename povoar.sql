@@ -12,7 +12,7 @@ VALUES (
     280727909,
     "Maria Miguel Diogo Figueiredo",
     "2001-04-02",
-    25
+    75
 );
 
 INSERT INTO Client (
