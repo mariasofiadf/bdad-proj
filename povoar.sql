@@ -282,7 +282,7 @@ VALUES (
     2,
     "Alimentação dos Tigres",
     4,
-    20
+    40
 );
 
 
@@ -534,7 +534,7 @@ VALUES (
     18,
     "2021-05-01 10:00",
     "2021-05-01 10:40",
-    1
+    2
 );
 
 INSERT INTO Activity(
@@ -547,7 +547,7 @@ VALUES (
     19,
     "2021-05-06 10:00",
     "2021-05-06 10:40",
-    1
+    2
 );
 INSERT INTO Activity(
     ActivityID,
@@ -559,7 +559,7 @@ VALUES (
     20,
     "2021-05-11 10:00",
     "2021-05-11 10:40",
-    1
+    2
 );
 
 INSERT INTO Activity(
@@ -572,7 +572,7 @@ VALUES (
     21,
     "2021-05-16 10:00",
     "2021-05-16 10:40",
-    1
+    2
 );
 
 INSERT INTO Activity(
@@ -585,7 +585,7 @@ VALUES (
     22,
     "2021-05-21 10:00",
     "2021-05-21 10:40",
-    1
+    2
 );
 
 INSERT INTO Activity(
@@ -598,7 +598,7 @@ VALUES (
     23,
     "2021-05-26 10:00",
     "2021-05-26 10:40",
-    1
+    2
 );
 
 INSERT INTO Activity(
@@ -611,7 +611,7 @@ VALUES (
     24,
     "2021-05-26 10:00",
     "2021-05-26 10:40",
-    1
+    2
 );
 
 INSERT INTO Activity(
@@ -624,7 +624,7 @@ VALUES (
     25,
     "2021-05-31 10:00",
     "2021-05-31 10:40",
-    1
+    2
 );
 
 INSERT INTO Activity(
@@ -637,7 +637,7 @@ VALUES (
     26,
     "2021-06-05 10:00",
     "2021-06-05 10:40",
-    1
+    2
 );
 
 INSERT INTO Activity(
@@ -650,7 +650,7 @@ VALUES (
     27,
     "2021-04-26 10:00",
     "2021-04-26 10:40",
-    1
+    2
 );
 
 
@@ -1898,8 +1898,81 @@ INSERT INTO Participates(
     ActivityID
 )
 VALUES (
+    0, --George
+    2
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    7, --Rei Julien
+    3
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    0, --George
+    4
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    7, --Rei Julien
+    5
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    0, --George
+    5
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    7, --Rei Julien
+    6
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    0,
+    7--George
+    
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    7, --Rei Julien
+    7
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
     1, --Blue
-    2 --First photos of the day
+    8 --First photos of the day
 );
 
 INSERT INTO Participates(
@@ -1908,7 +1981,7 @@ INSERT INTO Participates(
 )
 VALUES (
     2, --Blue
-    2 --First photos of the day
+    8 --First photos of the day
 );
 
 INSERT INTO Participates(
@@ -1917,7 +1990,7 @@ INSERT INTO Participates(
 )
 VALUES (
     1, --Jade
-    3  --Last photos of the day
+    9  --Last photos of the day
 );
 
 INSERT INTO Participates(
@@ -1926,10 +1999,8 @@ INSERT INTO Participates(
 )
 VALUES (
     8, --Zazu
-    3  --Last photos of the day
+    9  --Last photos of the day
 );
-
-
 
 
 INSERT INTO Participates(
@@ -1937,7 +2008,268 @@ INSERT INTO Participates(
     ActivityID
 )
 VALUES (
-    2, --Jade
-    3  --Last photos of the day
+    2, --Blue
+    9 --First photos of the day
 );
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    1, --Jade
+    10  --Last photos of the day
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    2, --Blue
+    11 --First photos of the day
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    1, --Jade
+    11  --Last photos of the day
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    8, --Zazu
+    12  --Last photos of the day
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    2, --Blue
+    13 --First photos of the day
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    1, --Jade
+    14  --Last photos of the day
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    8, --Zazu
+    15  --Last photos of the day
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    2, --Blue
+    15 --First photos of the day
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    1, --Jade
+    16  --Last photos of the day
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    8, --Zazu
+    16  --Last photos of the day
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    2, --Blue
+    17 --First photos of the day
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    1, --Jade
+    17  --Last photos of the day
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    3, --Richard Parker
+    18  --Tiger Feeding
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    3, --Richard Parker
+    19  --Tiger Feeding
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    3, --Richard Parker
+    20  --Tiger Feeding
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    3, --Richard Parker
+    21  --Tiger Feeding
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    3, --Richard Parker
+    22  --Tiger Feeding
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    3, --Richard Parker
+    23  --Tiger Feeding
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    3, --Richard Parker
+    24  --Tiger Feeding
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    3, --Richard Parker
+    25  --Tiger Feeding
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    3, --Richard Parker
+    26  --Tiger Feeding
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    3, --Richard Parker
+    27  --Tiger Feeding
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    9, --Zoey
+    20  --Tiger Feeding
+);
+
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    9, --Zoey
+    23  --Tiger Feeding
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    9, --Zoey
+    25  --Tiger Feeding
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    9, --Zoey
+    27  --Tiger Feeding
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    10, --Maggie
+    20  --Tiger Feeding
+);
+
+INSERT INTO Participates(
+    AnimalID,
+    ActivityID
+)
+VALUES (
+    10, --Maggie
+    25  --Tiger Feeding
+);
+
+
+
+
+
+
+
+
 
