@@ -552,6 +552,21 @@ VALUES (
     1
 );
 
+INSERT INTO Habitat(
+    HabitatID,
+    HName,
+    HOpeningTime,
+    HClosingTime,
+    ZoneID
+)
+VALUES (
+    5,
+    "Oasis Africano",
+    "09:00:00",
+    "17:30:00",
+    1
+);
+
 
 
 INSERT INTO AnimalGroup(
@@ -580,6 +595,16 @@ VALUES (
     2,
     "Felinos"
 );
+
+INSERT INTO AnimalGroup(
+    AnimalGroupID,
+    AGroupName
+)
+VALUES (
+    3,
+    "Mamiforos Hérbívoros"
+);
+
 
 INSERT INTO SocialLife(
     SocialLifeID,
@@ -1008,6 +1033,186 @@ VALUES (
     1
 );
 
+INSERT INTO Species(
+    SpeciesID,
+    CommonName,
+    ScientificName,
+    AverageWeight,
+    AverageHeight,
+    AverageLength,
+    NumberCubs,
+    Gestation,
+    SexualMaturity,
+    HabitatID,
+    SocialLifeID,
+    DietID,
+    ActivenessID,
+    ReproductionID,
+    AnimalGroupID
+)
+VALUES (
+    7,
+    "Tigre-branco",
+    "Panthera tigris",
+    195,
+    95,
+    260,
+    "3 crias",
+    "3 a 4 meses",
+    "3 a 5 anos",
+    2,
+    2,
+    2,
+    2,
+    0,
+    2
+);
+
+
+INSERT INTO Species(
+    SpeciesID,
+    CommonName,
+    ScientificName,
+    AverageWeight,
+    AverageHeight,
+    AverageLength,
+    NumberCubs,
+    Gestation,
+    SexualMaturity,
+    HabitatID,
+    SocialLifeID,
+    DietID,
+    ActivenessID,
+    ReproductionID,
+    AnimalGroupID
+)
+VALUES (
+    8,
+    "Tigre-de-sumatra",
+    "Panthera tigris sumatrae",
+    100,
+    73,
+    230,
+    "2 a 3 crias",
+    "4 meses",
+    "3 a 5 anos",
+    2,
+    2,
+    2,
+    2,
+    0,
+    2
+);
+
+
+INSERT INTO Species(
+    SpeciesID,
+    CommonName,
+    ScientificName,
+    AverageWeight,
+    AverageHeight,
+    AverageLength,
+    NumberCubs,
+    Gestation,
+    SexualMaturity,
+    HabitatID,
+    SocialLifeID,
+    DietID,
+    ActivenessID,
+    ReproductionID,
+    AnimalGroupID
+)
+VALUES (
+    9,
+    "Rinoceronte-branco",
+    "Ceratotherium simum",
+    3000,
+    180,
+    380,
+    "1 cria",
+    "16 meses",
+    "7 a 10 anos",
+    5,
+    5,
+    3,
+    0,
+    0,
+    3
+);
+
+
+INSERT INTO Species(
+    SpeciesID,
+    CommonName,
+    ScientificName,
+    AverageWeight,
+    AverageHeight,
+    AverageLength,
+    NumberCubs,
+    Gestation,
+    SexualMaturity,
+    HabitatID,
+    SocialLifeID,
+    DietID,
+    ActivenessID,
+    ReproductionID,
+    AnimalGroupID
+)
+VALUES (
+    10,
+    "Zebra-de-grevy",
+    "Equus grevyi",
+    430,
+    150,
+    280,
+    "1 cria",
+    "12 a 14 meses",
+    "3 anos",
+    5,
+    3,
+    3,
+    0,
+    0,
+    3
+);
+
+INSERT INTO Species(
+    SpeciesID,
+    CommonName,
+    ScientificName,
+    AverageWeight,
+    AverageHeight,
+    AverageLength,
+    NumberCubs,
+    Gestation,
+    SexualMaturity,
+    HabitatID,
+    SocialLifeID,
+    DietID,
+    ActivenessID,
+    ReproductionID,
+    AnimalGroupID
+)
+VALUES (
+    11,
+    "Avestruz",
+    "Struthio camelus",
+    115,
+    240,
+    120,
+    "15 a 60 ovos",
+    "35 a 45 dias",
+    "2 a 4 anos",
+    5,
+    4,
+    0,
+    0,
+    1,
+    1
+);
+
+
+
 INSERT INTO Animal(
     AnimalID,
     AnimalName,
@@ -1178,6 +1383,161 @@ VALUES (
     58,
     6
 );
+
+INSERT INTO Animal(
+    AnimalID,
+    AnimalName,
+    BirthDate,
+    AWeight,
+    AHeight,
+    ALength,
+    SpeciesID
+)
+VALUES (
+    9,
+    "Zoey",
+    "2012-08-27",
+    160,
+    90,
+    250,
+    7
+);
+
+INSERT INTO Animal(
+    AnimalID,
+    AnimalName,
+    BirthDate,
+    AWeight,
+    AHeight,
+    ALength,
+    SpeciesID
+)
+VALUES (
+    10,
+    "Maggie",
+    "2016-08-05",
+    85,
+    70,
+    220,
+    8
+);
+
+
+INSERT INTO Animal(
+    AnimalID,
+    AnimalName,
+    BirthDate,
+    AWeight,
+    AHeight,
+    ALength,
+    SpeciesID
+)
+VALUES (
+    11,
+    "Marty",
+    "2010-05-30",
+    400,
+    150,
+    230,
+    10
+);
+
+INSERT INTO Animal(
+    AnimalID,
+    AnimalName,
+    BirthDate,
+    AWeight,
+    AHeight,
+    ALength,
+    SpeciesID
+)
+VALUES (
+    12,
+    "Rosie",
+    "2013-02-25",
+    200,
+    125,
+    190,
+    10
+);
+
+INSERT INTO Animal(
+    AnimalID,
+    AnimalName,
+    BirthDate,
+    AWeight,
+    AHeight,
+    ALength,
+    SpeciesID
+)
+VALUES (
+    13,
+    "Max",
+    "2019-12-25",
+    80,
+    40,
+    60,
+    10
+);
+
+INSERT INTO Animal(
+    AnimalID,
+    AnimalName,
+    BirthDate,
+    AWeight,
+    AHeight,
+    ALength,
+    SpeciesID
+)
+VALUES (
+    14,
+    "Manny",
+    "2005-10-05",
+    2800,
+    175,
+    375,
+    9
+);
+
+INSERT INTO Animal(
+    AnimalID,
+    AnimalName,
+    BirthDate,
+    AWeight,
+    AHeight,
+    ALength,
+    SpeciesID
+)
+VALUES (
+    15,
+    "Ellie",
+    "2005-10-05",
+    2500,
+    150,
+    330,
+    9
+);
+
+INSERT INTO Animal(
+    AnimalID,
+    AnimalName,
+    BirthDate,
+    AWeight,
+    AHeight,
+    ALength,
+    SpeciesID
+)
+VALUES (
+    16,
+    "Birdy",
+    "2010-10-05",
+    125,
+    260,
+    140,
+    11
+);
+
+
 
 INSERT INTO Participates(
     AnimalID,
