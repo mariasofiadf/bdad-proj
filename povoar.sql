@@ -41,7 +41,7 @@ VALUES (
     2,
     237439581,
     "Joaquim da Costa Silva",
-    "1998-09-15",
+    "1988-09-15",
     0
 );
 
@@ -136,7 +136,7 @@ INSERT INTO TicketEntry(
 VALUES (
     "2021-04-02",
     22.50,
-    0,
+    0, --Maria
     2 --Adulto
 );
 
@@ -147,9 +147,23 @@ INSERT INTO TicketEntry(
     TicketTypeID   
 )
 VALUES (
-    "2021-05-25",
+    "2021-05-14",
     22.50,
-    0,
+    0, --Maria
+    2 --Adulto
+);
+
+
+INSERT INTO TicketEntry(
+    TDate,
+    TEPricePaid,
+    ClientID,
+    TicketTypeID   
+)
+VALUES (
+    "2021-06-05",
+    22.50,
+    0, --Maria
     2 --Adulto
 );
 
@@ -160,9 +174,9 @@ INSERT INTO TicketEntry(
     TicketTypeID   
 )
 VALUES (
-    "2021-05-26",
+    "2021-04-05",
     22.50,
-    3,
+    1, --Rita
     2 --Adulto
 );
 
@@ -170,41 +184,53 @@ INSERT INTO TicketEntry(
     TDate,
     TEPricePaid,
     ClientID,
-    TicketTypeID
+    TicketTypeID   
 )
 VALUES (
-    "2021-04-02",
-    16.0,
-    1,
-    3 --Senior
+    "2021-05-10",
+    22.50,
+    1, --Rita
+    2 --Adulto
 );
 
 INSERT INTO TicketEntry(
     TDate,
     TEPricePaid,
     ClientID,
-    TicketTypeID
+    TicketTypeID   
+)
+VALUES (
+    "2021-05-31",
+    22.50,
+    1, --Rita
+    2 --Adulto
+);
+
+INSERT INTO TicketEntry(
+    TDate,
+    TEPricePaid,
+    ClientID,
+    TicketTypeID   
+)
+VALUES (
+    "2021-06-05",
+    22.50,
+    1, --Rita
+    2 --Adulto
+);
+
+INSERT INTO TicketEntry(
+    TDate,
+    TEPricePaid,
+    ClientID,
+    TicketTypeID   
 )
 VALUES (
     "2021-04-04",
     22.50,
-    2,
+    2, --Joaquim
     2 --Adulto
 );
-
-INSERT INTO TicketEntry(
-    TDate,
-    TEPricePaid,
-    ClientID,
-    TicketTypeID
-)
-VALUES (
-    "2021-04-04",
-    14.50,
-    3,
-    1 --Criança
-);
-
 
 INSERT INTO TicketEntry(
     TDate,
@@ -213,36 +239,153 @@ INSERT INTO TicketEntry(
     TicketTypeID   
 )
 VALUES (
-    "2021-06-02",
-    22.50,
-    0,
-    2 --Adulto
-);
-
-INSERT INTO TicketEntry(
-    TDate,
-    TEPricePaid,
-    ClientID,
-    TicketTypeID
-)
-VALUES (
-    "2021-05-04",
-    22.50,
-    2,
-    2 --Adulto
-);
-
-INSERT INTO TicketEntry(
-    TDate,
-    TEPricePaid,
-    ClientID,
-    TicketTypeID
-)
-VALUES (
-    "2021-05-04",
+    "2021-04-04",
     14.50,
-    3,
+    2, --Inês
     1 --Criança
+);
+
+INSERT INTO TicketEntry(
+    TDate,
+    TEPricePaid,
+    ClientID,
+    TicketTypeID   
+)
+VALUES (
+    "2021-04-15",
+    22.50,
+    2, --Joaquim
+    2 --Adulto
+);
+
+INSERT INTO TicketEntry(
+    TDate,
+    TEPricePaid,
+    ClientID,
+    TicketTypeID   
+)
+VALUES (
+    "2021-04-15",
+    14.50,
+    2, --Inês
+    1 --Criança
+);
+
+INSERT INTO TicketEntry(
+    TDate,
+    TEPricePaid,
+    ClientID,
+    TicketTypeID   
+)
+VALUES (
+    "2021-05-01",
+    22.50,
+    2, --Joaquim
+    2 --Adulto
+);
+
+INSERT INTO TicketEntry(
+    TDate,
+    TEPricePaid,
+    ClientID,
+    TicketTypeID   
+)
+VALUES (
+    "2021-05-01",
+    14.50,
+    2, --Inês
+    1 --Criança
+);
+
+INSERT INTO TicketEntry(
+    TDate,
+    TEPricePaid,
+    ClientID,
+    TicketTypeID   
+)
+VALUES (
+    "2021-05-21",
+    22.50,
+    2, --Joaquim
+    2 --Adulto
+);
+
+INSERT INTO TicketEntry(
+    TDate,
+    TEPricePaid,
+    ClientID,
+    TicketTypeID   
+)
+VALUES (
+    "2021-05-21",
+    14.50,
+    2, --Inês
+    1 --Criança
+);
+
+INSERT INTO TicketEntry(
+    TDate,
+    TEPricePaid,
+    ClientID,
+    TicketTypeID   
+)
+VALUES (
+    "2021-06-05",
+    22.50,
+    2, --Joaquim
+    2 --Adulto
+);
+
+INSERT INTO TicketEntry(
+    TDate,
+    TEPricePaid,
+    ClientID,
+    TicketTypeID   
+)
+VALUES (
+    "2021-06-05",
+    14.50,
+    2, --Inês
+    1 --Criança
+);
+
+INSERT INTO TicketEntry(
+    TDate,
+    TEPricePaid,
+    ClientID,
+    TicketTypeID   
+)
+VALUES (
+    "2021-04-20",
+    22.50,
+    3, --Margarida
+    2 --Adulto
+);
+
+INSERT INTO TicketEntry(
+    TDate,
+    TEPricePaid,
+    ClientID,
+    TicketTypeID   
+)
+VALUES (
+    "2021-05-05",
+    22.50,
+    3, --Margarida
+    2 --Adulto
+);
+
+INSERT INTO TicketEntry(
+    TDate,
+    TEPricePaid,
+    ClientID,
+    TicketTypeID   
+)
+VALUES (
+    "2021-05-16",
+    22.50,
+    3, --Margarida
+    2 --Adulto
 );
 
 
