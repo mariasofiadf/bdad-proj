@@ -2,7 +2,7 @@
 .headers	on
 .nullvalue	NULL
 
---All activities clients participate in and it's prices
+--All activities clients participate in and its prices
 drop VIEW if EXISTS ActivityClientData;
 create view ActivityClientData
 as select clientid, activityid, atprice

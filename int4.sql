@@ -2,9 +2,6 @@
 .headers	on
 .nullvalue	NULL
 
---    
---Se tiver visto o animal mais que uma vez, aparece a mais recente [Menos Perminente]
-
 drop VIEW if EXISTS ActivityData;
 create view ActivityData
 as select clientid, atname, activityid, starttime

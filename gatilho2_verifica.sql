@@ -4,10 +4,10 @@
 
 --Primeiro exemplo: deixa adicionar
 .print ''
-.print 'Espécies na Floresta Siberiana antes de adicionar o tigre branco'
+.print 'Espécies na Floresta Siberiana antes de adicionar a chita'
 .print ''
 
-delete from Species where scientificname = "Panthera tigris";
+delete from Species where scientificname = "Acinonyx jubatus";
 SELECT commonname, habitatid, animalgroupid from Species where (Species.HabitatID = 2);
 
 
@@ -28,8 +28,8 @@ INSERT INTO Species(
     AnimalGroupID
 )
 VALUES (
-    "Tigre-branco",
-    "Panthera tigris",
+    "Chita",
+    "Acinonyx jubatus",
     40,
     120,
     94,
@@ -45,7 +45,7 @@ VALUES (
 );
 
 .print ''
-.print 'Espécies na Floresta Siberiana depois de adicionar o tigre branco'
+.print 'Espécies na Floresta Siberiana depois de adicionar a chita'
 .print ''
 
 SELECT commonname, habitatid, animalgroupid from Species where (Species.HabitatID = 2);

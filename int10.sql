@@ -2,18 +2,6 @@
 .headers	on
 .nullvalue	NULL
 
-
---Number of activities with more than two animals participating
---drop VIEW if EXISTS activitiesWithMoreThan2;
---create view activitiesWithMoreThan2
---as SELECT * from 
---(SELECT Participates.activityid, atname, count(*) as numberOfAnimals
---from Participates, ActivityType, Activity
---WHERE Activity.activitytypeid = ActivityType.activitytypeid
---and Participates.ActivityID = Activity.activityid
----GROUP By Participates.activityid)
---where numberOfAnimals > 1;
-
 --Number of participations of each animal
 drop VIEW if EXISTS numberOfParticipations;
 create view numberOfParticipations
@@ -29,7 +17,6 @@ from  Animal, Participates
 where(Participates.animalid = Animal.animalid);
       
 
---
 drop VIEW if EXISTS ParticipationDuoCount;
 create view ParticipationDuoCount
 as SELECT IDAnimal1, Animal1, Animal2, count (*) as DuoCount 

@@ -1,4 +1,4 @@
---Só deixa adicicionar se não existir um animal de outro grupo
+--Só deixa adicionar se não existir um animal de outro grupo
 
 CREATE TRIGGER IF NOT EXISTS placeSpecies
 Before INSERT ON Species

@@ -2,6 +2,7 @@
 .header on
 .nullvalue NULL
 
+.print ''
 .print 'Número de pontos antes da compra'
 SELECT clientid, cpoints from Client where clientid = 0;
 
@@ -18,6 +19,7 @@ VALUES (
     2 --Adulto
 );
 
+.print ''
 .print 'Pontos a adicionar'
 SELECT tickettypeid, tpoints  from TicketType WHERE TicketType.TicketTypeID = 2;
 
