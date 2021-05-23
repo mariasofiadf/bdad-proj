@@ -40,7 +40,7 @@ GROUP By Animal2, Animal1;
 
 
 --[FINAL] Proporção em que um animal participa em atividades com outro
-SELECT Animal1, nParticipations, Animal2, DuoCount, round((duoCount *1.0/nParticipations) * 100, 2) as DuoParticipationRate
+SELECT Animal1, Animal2, DuoCount, round((duoCount *1.0/nParticipations) * 100, 2) as DuoParticipationRate
 from ParticipationDuoCount, numberOfParticipations 
 where (numberOfParticipations.animalid = ParticipationDuoCount.IDAnimal1);
 
